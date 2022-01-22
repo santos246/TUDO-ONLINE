@@ -1,0 +1,1017 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>TUDO ONLINE</title>
+<link rel="shortcut icon" href="https://www.tvgazeta.com.br/wp-content/plugins/template-tvgazeta/views/imagens/header/ao-vivo-alerta.gif" type="image/x-icon"/>
+<meta name="author" content="santos.12164@hotmail.com">
+<meta name="description" content="TUDO ONLINE">
+<meta name="keywords" content=" TUDO ONLINE, DRIVE, EXEMPLOS, ONLINE,TUDO,">
+<style>
+a:link { color: red; text-decoration: none; }
+a:visited { color: red; }
+a:hover { color: red; }
+a: active { color: red; }
+</style>
+<CENTER>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+.navbar {
+  overflow: hidden;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 19px;
+}
+.navbar a:hover {
+  background: #00FF00;
+  color: #000000;
+}
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<!------------------------------------🔴-------------------------------------->
+  <a href="index.html">INICIO</a>
+  <a href="DICAS/1 - Copia.html">DICAS</a>
+  <a href="RECEITAS/1 - Copia.html">RECEITAS</a>
+  <a href="VIDEOS/1 - Copia.html">VIDEOS</a>
+
+<!------------------------------------🔴-------------------------------------->
+</div>
+<div class="main">
+<!------------------------------------RELOGIO-------------------------------->
+<hr/><FONT FACE=Arial COLOR="#FFFF00">
+<html>
+<head>
+</head>
+<body>
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+var now = new Date();
+var mName = now.getMonth() +1 ;
+var dName = now.getDay() +1;
+var dayNr = now.getDate();
+var yearNr=now.getYear();
+if(dName==1) {Day = "Domingo";}
+if(dName==2) {Day = "Segunda-feira";}
+if(dName==3) {Day = "Terça-feira";}
+if(dName==4) {Day = "Quarta-feira";}
+if(dName==5) {Day = "Quinta-feira";}
+if(dName==6) {Day = "Sexta-feira";}
+if(dName==7) {Day = "Sábado";}
+if(mName==1){Month = "Janeiro";}
+if(mName==2){Month = "Fevereiro";}
+if(mName==3){Month = "Março";}
+if(mName==4){Month = "Abril";}
+if(mName==5){Month = "Maio";}
+if(mName==6){Month = "Junho";}
+if(mName==7){Month = "Julho";}
+if(mName==8){Month = "Agosto";}
+if(mName==9){Month = "Setembro";}
+if(mName==10){Month = "Outubro";}
+if(mName==11){Month = "Novembro";}
+if(mName==12){Month = "Dezembro";}
+if(yearNr < 2000) {Year = 1900 + yearNr;}
+else {Year = yearNr;}
+var todaysDate =(" " + Day + ", " + dayNr + "/" + Month + "/" + Year);
+document.write('  '+todaysDate);
+//-->
+</SCRIPT>
+<SPAN ID="Clock">00:00:00</SPAN>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+  var Elem = document.getElementById("Clock");
+  function Horario(){ 
+    var Hoje = new Date(); 
+    var Horas = Hoje.getHours(); 
+    if(Horas < 10){ 
+      Horas = "0"+Horas; 
+    } 
+    var Minutos = Hoje.getMinutes(); 
+    if(Minutos < 10){ 
+      Minutos = "0"+Minutos; 
+    } 
+    var Segundos = Hoje.getSeconds(); 
+    if(Segundos < 10){ 
+      Segundos = "0"+Segundos; 
+    } 
+    Elem.innerHTML = Horas+":"+Minutos+":"+Segundos; 
+    } 
+    window.setInterval("Horario()",1000);
+//-->
+</SCRIPT>
+</body>
+</html>
+</FONT></FONT>
+<!--------------------------------CALENDÁRIO---------------------------------->
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+var day_of_week = new Array('<FONT COLOR="#FF0000">DOM</FONT>','Seg','Ter','Qua','Qui','Sex','Sab');
+var month_of_year = new Array('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro');
+var Calendar = new Date();
+var year = Calendar.getYear();       // Retorna o ano
+var month = Calendar.getMonth();    // Retorna mes (0-11)
+var today = Calendar.getDate();     // Retorna dias (1-31)
+var weekday = Calendar.getDay();   // Retorna dias (1-31)
+var DAYS_OF_WEEK = 7;    // "constant" para o numero de dias na semana
+var DAYS_OF_MONTH = 31;    // "constant" para o numero de dias no mes
+var cal;    // Usado para imprimir na tela
+Calendar.setDate(1);    // Comecar o calendario no dia '1'
+Calendar.setMonth(month);    // Comecar o calendario com o mes atual
+var TR_start = '<TR>';
+var TR_end = '</TR>';
+var highlight_start = '<TD WIDTH="30"><TABLE CELLSPACING=0 BORDER=5 BGCOLOR=#40FF00 BORDERCOLOR=#FFFF00><TR><TD WIDTH=20><B><CENTER>';
+var highlight_end   = '</CENTER></TD></TR></TABLE></B>';
+var TD_start = '<TD WIDTH="30"><CENTER>';
+var TD_end = '</CENTER></TD>';
+cal =  '<TABLE BORDER=5 CELLSPACING=0 CELLPADDING=0 BORDERCOLOR=#FF00FF><TR><TD>';
+cal += '<TABLE BORDER=4 CELLSPACING=0 CELLPADDING=2>' + TR_start;
+cal += '<TD COLSPAN="' + DAYS_OF_WEEK + '" BGCOLOR="#2E64FE"><CENTER><B>';
+cal += month_of_year[month]  + '   ' + year + '</B>' + TD_end + TR_end;
+cal += TR_start;
+for(index=0; index < DAYS_OF_WEEK; index++)
+{
+if(weekday == index)
+cal += TD_start + '<B>' + day_of_week[index] + '</B>' + TD_end;
+else
+cal += TD_start + day_of_week[index] + TD_end;
+}
+cal += TD_end + TR_end;
+cal += TR_start;
+for(index=0; index < Calendar.getDay(); index++)
+cal += TD_start + '  ' + TD_end;
+for(index=0; index < DAYS_OF_MONTH; index++)
+{
+if( Calendar.getDate() > index )
+{
+  week_day =Calendar.getDay();
+  if(week_day == 0)
+  cal += TR_start;
+  if(week_day != DAYS_OF_WEEK)
+  {
+  var day  = Calendar.getDate();
+  if( today==Calendar.getDate() )
+  cal += highlight_start + day + highlight_end + TD_end;
+  else
+  cal += TD_start + day + TD_end;
+  }
+  if(week_day == DAYS_OF_WEEK)
+  cal += TR_end;
+  }
+  Calendar.setDate(Calendar.getDate()+1);
+}
+cal += '</TD></TR></TABLE></TABLE>';
+//  MOSTRAR CALENDARIO
+document.write(cal);
+//  End -->
+</SCRIPT>
+<!-------------------------------NOTICIAS------------------------------->
+   
+<!---------------------------------CORPO-------------------------------->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #DF0101;
+  padding: 20px;
+  font-family: Arial;
+}
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+.row {
+  margin: 8px -16px;
+}
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Content */
+.content {
+  background-color: #00FF00;
+  padding: 10px;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>TUDO ONLINE</h1>
+<hr>
+
+<h2>BEM VINDO</h2>
+<p>AQUI VC IRÁ ENCONTRAR VIDEOS QUE SÓ PODE SER VISTO ON-LINE (COM INTERNET)</p>
+<!-----------------------------🔴🔴🔴🔴🔴---------------------------->
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+<!-------------------------------------------------------------------->
+<!-------------------------------------------------------------------->
+<!-------------------------------------------------------------------->
+<!-------------------------------------------------------------------->
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+
+
+
+
+
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+<div class="column"><div class="content"><a href="
+LINK
+" target="_blank"><h2><img src="
+IMAGEM
+" alt="Mountains" style="width:100%"></h2>CLIQUE AQUI</a><h3>
+NOME
+</h3><br/><textarea rows="10" cols="20" maxlength="50">
+SOBRE
+</textarea><BR/></div></div>
+<!-------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!-------------------------------------------------------------------->
+<!-- END GRID -->
+</div>
+<!-- END MAIN -->
+</div>
+</body>
+</html>
+<!----------------------------------SOMBRA H1------------------------------>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+<!----------------------------------SOMBRA H2------------------------------>
+<html>
+<head>
+<style>
+h2 {
+  color: #0000FF;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+<!-----------------------------------BOTÃO-------------------------->
+<html>
+<head>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #DF0101;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #3e8e41}
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+<!-----------------------------------COR PAG------------------------------>
+<body bgcolor="#F7FE2E">
+<body bgcolor="rgb(0,0,0)">
+<body bgcolor="black">
+<!-----------------------------------PAGINAÇÃO-----------------
+<BR/><HR/><html>
+<head>
+<style>
+.pagination {
+  display: inline-block;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 18px 26px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 3px solid #ddd;
+  font-size: 22px;
+}
+.pagination a.active {
+  background-color: #2EFE2E;
+  color: white;
+  border: 3px solid #4CAF50;
+}
+.pagination a:hover:not(.active) {background-color: #FFFF00;}
+</style>
+</head>
+<body>
+<div class="pagination">
+
+  <a href="1 - Copia (2).html">2</a>
+  <a href="1 - Copia (3).html" class="active">3</a>
+  <a href="1 - Copia (4).html">4</a>
+
+</div>
+</body>
+</html>
+---------------FALE COMIGO-------------------------->
+<BR/><HR/>
+<!-------------INCREVA-SE NO MEU CANAL YOUTUBE---------------------------->
+INCREVA-SE NO MEU CANAL YOUTUBE<br/>
+<a href="
+https://www.youtube.com/channel/UCUhMP0pjOJN5BAhVcvzlwMg?sub_confirmation=1
+" target="_blank">
+<img src="https://img.ibxk.com.br/2020/03/04/04134343768227.jpg" width="150">
+</a><br/>
+<!---------------------------FACEBOOK---------------------------->
+<a target="_blank" href="http://www.facebook.com/sharer.php?u=LINK"><img src="https://pcdn.sharethis.com/wp-content/uploads/2017/11/Facebook-share-icon.png" width="90"></a>
+<!---------------------------------------------------------------------->
+ 
+<!-------------------------WHATZAPP--------------------------------->
+<style> #imagem_whats{position:fixed;right:0;bottom:0;display:block;cursor:pointer;z-index:9999999;float:right} #imagem_whats2{position:fixed;right:0;bottom:0;display:block;cursor:pointer;z-index:9999999;float:right;display:none} @media only screen and (max-width: 999px) and (min-width: 100px){#imagem_whats{display:none}#imagem_whats2{display:block}}</style><img id="imagem_whats" src="https://www.ellodigital.com.br/images/whatsapp.png" onClick="window.open('https://web.whatsapp.com/send?phone=+5585988885153&amp;text=Olá!❤️ GOSTEI DE SEU SITE E GOSTARIA DE DIZER QUE ...', '_blank');"><img id="imagem_whats2" src="https://www.ellodigital.com.br/images/whatsapp.png" onClick="window.open('https://api.whatsapp.com/send?phone=+5585988885153&amp;text=Olá!SANTOS, QUERIA FALAR QUE...', '_blank');"><div class="preloader"> <div class="preloaderimg"></div></div>
+<!---------------------------------------------------------------------->
+NAO ESTA FUCIONANDO? <br/> FALE COMIGO P/ WHATSAPP
+<!-------------------------WHATSAPP E EMAIL----------------------------->
+<p>
+<a href="https://api.whatsapp.com/send?phone=5585988885153&text=Ol%C3%A1%20❤️SANTOS%2C%20GOSTARIA%20DE%20DIZER%20QUE%20.%20.%20.%20%20%20%20" target="_blank"><img src="https://static.wixstatic.com/media/84bd10_5b3ce28905c64674a4147f1f08878723~mv2.gif" width="100"></a>
+</p>
+<p>©<br><a href="mailto:santos.12164@hotmail.com?Subject=OI%20SANTOS,%20GOSTARIA%20DE%20FALAR%20SOBRE%20SEU%20SITE..." target="_top">santos.12164@hotmail.com</a>
+<br/></p></h6>
+<h4>FIM</h4>
+<!---------------------------------------------------------------------->
+<a class="fa fa-envelope" href="mailto:?subject=&body=:%20" target="_blank=" title="Email"onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(document.URL)); return false;">✉️ENVIE ESSE PARA O EMAIL DE ALGUEM✉️</a></a>
+
+</html><span id='FIM'></span>
+</center>
+</body></html>
+
+
+
+
+</div>
+</body>
+</html>
+
